@@ -5,7 +5,8 @@ def main():
     user_input = input("Enter your question for the LLM: ")
     try:
         response = ollama.chat(
-            model='mistral:7b-q4',
+           # model='mistral:7b-q4',
+            model='mistral',  # Ensure this matches the model you have pulled
             messages=[{'role': 'user', 'content': user_input}]
         )
         print("\n--- LLM Response ---")
